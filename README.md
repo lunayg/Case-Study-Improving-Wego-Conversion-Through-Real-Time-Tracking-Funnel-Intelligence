@@ -1,4 +1,4 @@
-## Case Study: Root-Cause Analysis of CTR Decline: Detecting FX Drift & Pricing Inconsistencies in Travel MetaSearch
+## Case Study: Root-Cause Analysis of Pricing Inconsistencies: detecting system latency that causes fx drift in Travel MetaSearch
 
 _Focus on uncovering the drivers of Pricing Inconsistencies & CTR Drop_
 
@@ -25,9 +25,10 @@ Wego aggregates millions of flight and hotel options daily from multiple provide
 ---
 ## ✅ Previous Insights
 
-1. Correlation & Lag Analysis
+1. Correlation, Lag & Quantifying Impact Analysis 
 
 - FX Drift consistently increased before the CTR drop, establishing a directionally consistent correlation between pricing anomalies and user engagement decline.
+- Regression analysis shows each 1% FX Drift corresponds to ~0.5% CTR drop.
 
 2. System Health Check
 
@@ -43,7 +44,7 @@ Wego aggregates millions of flight and hotel options daily from multiple provide
 
 5. Overall Conclusion
 
-- The analysis confirmed that **FX Drift preceded the CTR drop**.
+- The analysis confirmed that **FX Drift preceded the CTR drop**, with each 1% FX Drift corresponds to ~0.5% CTR drop.
 
 - Route-level isolation highlighted the Dubai → Cairo route as the critical path for intervention.
 
@@ -66,9 +67,9 @@ This stage focuses on validating hypotheses and _isolating key variables (poor s
 
 | ID | Hypothesis | Layer | Metric | Expected Outcome |
 |----|-------------|------|--------|------------------|
-| H1 | System latency spikes **latency (P95 > 5s)** cause **FX drift and stale pricing**. | System | p95 Latency, FX Drift %, Stale Price % | Positive correlation |
-| H2 | FX drift and stale prices increase **price volatility**.| Data | FX Drift %, Stale Price %, Price Volatility Index | Positive trend |
-| H3 | Higher price volatility reduces **Price accuracy**, which lowers **user trust, and therefore CTR** and **Search-to-Book Conversion**. | Behavioral | Price Volatility %, Price Accuracy %, CTR, Search-to-Book Conversion %, Abandonment % | Negative trend |
+| H1 | System latency spikes **latency (P95 > 5s)** cause **stale pricing**. | System | p95 Latency, FX Drift %, Stale Price % | Positive correlation |
+| H2 | Stale prices increase **fx drift**.| Data | FX Drift %, Stale Price %| Positive trend |
+| H3 | Higher fx drift reduces **Price accuracy**, which lowers **user trust, and therefore CTR** and **Search-to-Book Conversion**. | Behavioral | FX Drift %, CTR, Search-to-Book Conversion %, Abandonment % | Negative trend |
 | H4 | Search relevance remains stable → **pricing is the key driver**.| Control | Relevance Score, CRI, CRR, Bounce % | Stable |
 
 Flowchart
