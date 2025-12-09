@@ -21,6 +21,33 @@ Wego aggregates millions of flight and hotel options daily from multiple provide
 **Conversion Drop QoQ After Search**  
    Despite high search activity, the conversion rate from *search → click → booking redirect* was declining during  Ramadan travel week.  
    Product managers suspected **pricing inconsistencies** as main culprits.
+---
+## ✅ Previous Insights
+
+1. Correlation & Lag Analysis
+
+- FX Drift consistently increased before the CTR drop, establishing a directionally consistent correlation between pricing anomalies and user engagement decline.
+
+2. System Health Check
+
+- No cache delays were detected, and **API benchmarks were functioning normally**, indicating that system performance was not the root cause of the anomaly.
+
+3. Route Isolation
+
+- Abnormal FX Drift was isolated to the **Dubai → Cairo route**, while all other routes remained stable, confirming the issue was route-specific.
+
+4. Provider Sensitivity Check
+
+- No **abnormal CTR drops were observed at the individual provider level**, further supporting that the CTR decline was not provider-specific.
+
+5. Overall Conclusion
+
+- The analysis confirmed that **FX Drift preceded the CTR drop**.
+
+- Route-level isolation highlighted the Dubai → Cairo route as the critical path for intervention.
+
+- Provider-level checks validated that the anomaly was route-specific, making it a clear priority to validate the causal relationship between FX Drift and CTR decline for this route to inform targeted corrective actions.
+
 
 ---
 
