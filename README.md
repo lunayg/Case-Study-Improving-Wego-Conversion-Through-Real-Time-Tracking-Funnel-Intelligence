@@ -1,12 +1,12 @@
-## Case Study: Root-Cause Analysis of CTR Decline: Detecting FX Drift & Pricing Inconsistencies in Wego
+## Case Study: Root-Cause Analysis of CTR Decline: Detecting FX Drift & Pricing Inconsistencies in Travel MetaSearch
 
-_Focus on uncovering the drivers of CTR Drop, a real-time pricing diagnostics for Wego_
+_Focus on uncovering the drivers of Pricing Inconsistencies & CTR Drop_
 
 ---
 
 ## 🗒️Overview
 
-This case study simulates a real-world project for **Wego**, a leading travel platform, focused on solving key business intelligence challenges in travel data during peak seasons:  
+This case study simulates a real-world project for **Wego**, a leading travel metasearch platform, focused on solving key business intelligence challenges in travel data during peak seasons:  
 - **Price volatility** and **data lag** 
 - Potential loss of user trust suggested by **Conversion drop-offs** in the search-to-booking funnel  
 
@@ -21,6 +21,7 @@ Wego aggregates millions of flight and hotel options daily from multiple provide
 **Conversion Drop QoQ After Search**  
    Despite high search activity, the conversion rate from *search → click → booking redirect* was declining during  Ramadan travel week.  
    Product managers suspected **pricing inconsistencies** as main culprits.
+   
 ---
 ## ✅ Previous Insights
 
